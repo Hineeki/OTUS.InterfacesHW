@@ -12,5 +12,10 @@
         {
             return _components;
         }
+
+        public string GetInfo()
+        {
+            return this.GetType().Name;
+        }
     }
 }

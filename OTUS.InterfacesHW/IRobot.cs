@@ -2,14 +2,8 @@
 {
     public interface IRobot
     {
-        public string GetInfo()
-        {
-            return string.Empty;
-        }
+        public string GetInfo();
         public List<string> GetComponents()
-        {
-            return new List<string>();
-        }
         public virtual string GetRobotType()
         {
             return "I'm a simple robot.";

@@ -6,10 +6,7 @@
         {
             Console.WriteLine("Charging...");
         }
-        public string GetInfo()
-        {
-            return string.Empty;
-        }
+        public string GetInfo();
     }
 }
 

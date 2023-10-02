@@ -1,5 +1,9 @@
 ﻿namespace OTUS.InterfacesHW
 {
+    interface IDataProvider
+    {
+
+    }
     internal class Program
     {
         static void Main(string[] args)
