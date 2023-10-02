@@ -2,21 +2,51 @@
 {
     interface IDataProvider
     {
-
+        string GetData();
     }
+    interface IDataProcessor
+    {
+        void ProcessData(IDataProvider dataProvider);
+    }
+    class ConsoleDataProcessor : IDataProcessor
+    {
+        public void ProcessData(IDataProvider dataProvider)
+        {
+            Console.WriteLine(dataProvider.GetData());
+        }
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            Quadrocopter quadrocopter = new Quadrocopter();
+            IDataProcessor processor = new ConsoleDataProcessor();
 
-            FlyingRobot robot = new FlyingRobot();
+            processor.ProcessData(new DbDataProvider());
+            processor.ProcessData(new FileDataProvider());
+            processor.ProcessData(new APIDataProvider());
         }
     }
-    public class FlyingRobot : IFlyingRobot
+
+    class DbDataProvider : IDataProvider
     {
-        public FlyingRobot() { }
-
-
+        public string GetData()
+        {
+            return "Данные из БД";
+        }
+    }
+    class FileDataProvider : IDataProvider
+    {
+        public string GetData()
+        {
+            return "Данные из файла";
+        }
+    }
+    class APIDataProvider : IDataProvider
+    {
+        public string GetData()
+        {
+            return "Данные из АПИ";
+        }
     }
 }
