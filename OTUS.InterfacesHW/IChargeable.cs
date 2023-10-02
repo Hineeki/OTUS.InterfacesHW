@@ -1,13 +1,15 @@
-﻿using System;
-
-public interface IChargeable
+﻿namespace OTUS.InterfacesHW
 {
-    public void Charge()
+    public interface IChargeable
     {
-        Console.WriteLine("Charging...");
-    }
-    public string GetInfo()
-    {
-        return string.Empty;
+        public void Charge()
+        {
+            Console.WriteLine("Charging...");
+        }
+        public string GetInfo()
+        {
+            return string.Empty;
+        }
     }
 }
+

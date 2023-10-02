@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace OTUS.InterfacesHW
+﻿namespace OTUS.InterfacesHW
 {
     internal class Program
     {
