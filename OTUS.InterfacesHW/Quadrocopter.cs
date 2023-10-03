@@ -15,7 +15,12 @@
 
         public string GetInfo()
         {
-            return this.GetType().Name;
+            return GetType().Name;
+        }
+
+        public void Charge()
+        {
+            Console.WriteLine("Charging");
         }
     }
 }

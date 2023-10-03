@@ -2,10 +2,7 @@
 {
     public interface IChargeable
     {
-        public void Charge()
-        {
-            Console.WriteLine("Charging...");
-        }
+        public void Charge();
         public string GetInfo();
     }
 }
